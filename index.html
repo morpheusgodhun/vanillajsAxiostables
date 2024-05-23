@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Data Table</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+    <div class="header">   
+        <h2>Ürün Listesi</h2>
+    </div>
+
+    <div class="search-sort-container">
+        <input type="text" id="searchInput" placeholder="Ara...">
+        <div class="dropdown">
+            <button id="sortButton" class="sort-button">SIRALA</button>
+            <div id="sortDropdown" class="sort-dropdown-content">
+                <a href="#" id="sortByPriceAsc">Fiyata Göre Yüksekten Düşüğe Sırala</a>
+                <a href="#" id="sortByPriceDesc">Fiyata Göre Düşükten Yükseğe Sırala</a>
+                <a href="#" id="sortByDateAsc">Tarihe Göre Eskiden Yeniye Sırala</a>
+                <a href="#" id="sortByDateDesc">Tarihe Göre Yeniden Eskiye Sırala</a>
+                <a href="#" id="sortAlphabeticalAsc">Alfabetik Olarak A'dan Z'ye Sırala</a>
+                <a href="#" id="sortAlphabeticalDesc">Alfabetik Olarak Z'den A'ya Sırala</a>
+            </div>
+        </div>
+        <div class="excelDiv">
+            <button id="exportButton" class="exceleAktar">Excel'e Aktar</button>
+        </div>
+    </div>
+    
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Ürün Adı</th>
+                <th>Fiyat</th>
+                <th>Çıkış Tarihi</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
